@@ -1,14 +1,20 @@
 const middleware1 = (req, res, next) => {
-  console.log('I\'m a middleware');
+  console.log('I\'m a middleware 1');
   next();
-}
+};
 
-const expressCallback = (req, res, next) => {
-  console.log('I\'m standard callback');
-  res.send("<h1>Hello, World!</h1>");
-}
+const middleware2 = (req, res, next) => {
+  console.log('I\'m a middleware 2');
+  next();
+};
+
+const middleware3 = (req, res, next) => {
+  console.log('I\'m a middleware 3');
+  next();
+};
 
 module.exports = {
-  expressCallback,
   middleware1,
-}
+  middleware2,
+  middleware3,
+};
